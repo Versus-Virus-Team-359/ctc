@@ -1,0 +1,78 @@
+{
+    "name": "versus-virus",
+    "version": "1.0.0",
+    "description": "Versus Virus 2020 Hackaton project",
+    "license": "MIT",
+    "author": {
+        "name": "Antoni Kepinski",
+        "email": "a@kepinski.me",
+        "url": "https://kepinski.me"
+    },
+    "main": "app/background.js",
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "start": "next start",
+        "test": "xo"
+    },
+    "engines": {
+        "node": "12.x"
+    },
+    "dependencies": {
+        "@chakra-ui/core": "^0.7.0",
+        "@emotion/core": "^10.0.28",
+        "@emotion/styled": "^10.0.27",
+        "core-js": "^3.6.4",
+        "emotion-theming": "^10.0.27",
+        "next": "^9.3.4",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@types/react": "^16.9.32",
+        "@types/react-select": "^3.0.11",
+        "@typescript-eslint/eslint-plugin": "^2.26.0",
+        "@typescript-eslint/parser": "^2.26.0",
+        "babel-plugin-emotion": "^10.0.33",
+        "eslint-config-xo-react": "^0.23.0",
+        "eslint-config-xo-typescript": "^0.27.0",
+        "eslint-plugin-react": "^7.19.0",
+        "eslint-plugin-react-hooks": "^3.0.0",
+        "next-fonts": "^1.0.3",
+        "next-offline": "^5.0.0",
+        "typescript": "^3.8.3",
+        "xo": "^0.28.2"
+    },
+    "xo": {
+        "envs": [
+            "node",
+            "browser"
+        ],
+        "extends": [
+            "xo-typescript",
+            "xo-react"
+        ],
+        "rules": {
+            "import/no-unassigned-import": "off",
+            "import/extensions": "off",
+            "unicorn/string-content": "off",
+            "@typescript-eslint/no-unsafe-return": "off",
+            "@typescript-eslint/prefer-readonly-parameter-types": "off",
+            "@typescript-eslint/no-unsafe-call": "off"
+        },
+        "settings": {
+            "react": {
+                "version": "16.13"
+            }
+        },
+        "extensions": [
+            "tsx",
+            "ts"
+        ],
+        "ignores": [
+            "babel.config.js",
+            "next.config.js"
+        ]
+    }
+}
