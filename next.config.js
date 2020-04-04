@@ -1,5 +1,6 @@
 const withFonts = require('next-fonts');
 const withOffline = require('next-offline');
+const withImages = require('next-images');
 
 const nextConfig = {
 	workboxOpts: {
@@ -28,4 +29,4 @@ const nextConfig = {
 	}
 };
 
-module.exports = withFonts(withOffline(nextConfig));
+module.exports = withImages(withFonts(withOffline(nextConfig)));

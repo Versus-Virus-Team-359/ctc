@@ -41,10 +41,9 @@ const globalStyle = css`
   	}
 
 	body {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+		line-height: 1.6;
+		margin: 0;
+		width: 100%;
 		-webkit-font-smoothing: antialiased;
 		text-rendering: optimizeSpeed;
     	overflow-x: hidden;
