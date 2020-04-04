@@ -1,8 +1,11 @@
 import React from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
-import {ThemeProvider, DarkMode, theme, CSSReset} from '@chakra-ui/core';
+import {ThemeProvider, DarkMode, theme, CSSReset, Text} from '@chakra-ui/core';
 import {Global, css} from '@emotion/core';
+
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 // Fonts
 import BitterWoff from '../public/fonts/bitter-v15-latin-regular.woff';
@@ -56,9 +59,13 @@ const myApp = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => (
 			<CSSReset/>
 			<Global styles={globalStyle}/>
 			<Head>
-				<title>Name</title>
+				<title>CTC</title>
 			</Head>
+			<Navbar/>
 			<Component {...pageProps}/>
+			<Footer>
+				<Text>Made with ❤️ at Versus Virus 2020</Text>
+			</Footer>
 		</DarkMode>
 	</ThemeProvider>
 );
