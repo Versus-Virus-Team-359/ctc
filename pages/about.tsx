@@ -26,7 +26,7 @@ const About: NextPage<unknown> = () => {
 						<Text maxWidth="50em" p={3}>
 							<Text as="b">Coronavirus Treatment Comparison (CTC)</Text> was made during the 48 hour long #VersusVirus online hackaton, held under the patronage of Swiss goverment.
 							Our team (#359), initially composed of 9 members, at the end containing 2 people decided to solve a challenge #100 (&quot;Light up the effective treatments&quot;).
-							We built a web application using React and Next.js, that includes general stats related to coronavirus, as well as treatment comparisons.
+							We built a web application using React and Next.js, which includes general stats related to coronavirus, as well as treatment comparisons.
 							Despite having a limited human force, we managed to finish everything and submit the project.
 						</Text>
 					</Stack>
