@@ -1,10 +1,14 @@
-# Versus Virus 2020 Hackaton
+# Project name
 
 > Description
 
 Badges
 
 ---
+
+## About
+
+Made with React, Next.js, Styled Components and Chakra UI.
 
 ## Highlights
 
