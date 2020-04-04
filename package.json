@@ -1,7 +1,7 @@
 {
-    "name": "versus-virus",
+    "name": "coronavirus-treatment-comparison",
     "version": "1.0.0",
-    "description": "Versus Virus 2020 Hackaton project",
+    "description": "Explore stats & compare coronavirus treatment methods easily! #VersusVirus 2020 hackaton project.",
     "license": "MIT",
     "author": {
         "name": "Antoni Kepinski",
@@ -29,6 +29,7 @@
         "isomorphic-unfetch": "^3.0.0",
         "next": "^9.3.4",
         "next-images": "^1.4.0",
+        "nprogress": "^0.2.0",
         "react": "^16.13.1",
         "react-chartjs-2": "^2.9.0",
         "react-dom": "^16.13.1",
@@ -37,6 +38,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.9.0",
+        "@types/nprogress": "^0.2.0",
         "@types/react": "^16.9.32",
         "@types/react-select": "^3.0.11",
         "@typescript-eslint/eslint-plugin": "^2.26.0",

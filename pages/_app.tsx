@@ -1,17 +1,20 @@
 import React from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
+import Router from 'next/router';
 import {ThemeProvider, DarkMode, theme, CSSReset, Text} from '@chakra-ui/core';
 import {Global, css} from '@emotion/core';
+import NProgress from 'nprogress';
 
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
-// Fonts
+// Assets
 import BitterWoff from '../public/fonts/bitter-v15-latin-regular.woff';
 import BitterWoff2 from '../public/fonts/bitter-v15-latin-regular.woff2';
 import OpenSansWoff from '../public/fonts/open-sans-v17-latin-regular.woff';
 import OpenSansWoff2 from '../public/fonts/open-sans-v17-latin-regular.woff2';
+import '../public/styles/nprogress.css';
 
 const customTheme = {
 	...theme,
@@ -53,6 +56,12 @@ const globalStyle = css`
 	}
 `;
 
+Router.events.on('routeChangeStart', () => {
+	NProgress.start();
+});
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
+
 const myApp = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => (
 	<ThemeProvider theme={customTheme}>
 		<DarkMode>
@@ -64,7 +73,7 @@ const myApp = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => (
 			<Navbar/>
 			<Component {...pageProps}/>
 			<Footer>
-				<Text>Made with ❤️ at Versus Virus 2020</Text>
+				<Text>Made with ❤️ at #VersusVirus 2020</Text>
 			</Footer>
 		</DarkMode>
 	</ThemeProvider>

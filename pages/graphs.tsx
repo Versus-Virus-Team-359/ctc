@@ -42,20 +42,18 @@ interface Props {
 export const getServerSideProps: GetServerSideProps = async () => {
 	const globalData = await fetcher('timeline-global');
 	const swissData = await fetcher('timeline-swiss');
-	const countriesData = await fetcher('timeline-countries');
 
-	return {props: {globalData, swissData, countriesData}};
+	return {props: {globalData, swissData}};
 };
 
 const Graphs: NextPage<Props> = (props: Readonly<Props>) => {
 	const initialGlobalData = props.globalData;
 	const initialSwissData = props.swissData;
-	const initialCountriesData = props.countriesData;
 
+	const [country, setCountry] = useState<string>('');
 	const {data: globalData} = useSWR('timeline-global', fetcher, {initialData: initialGlobalData});
 	const {data: swissData} = useSWR('timeline-swiss', fetcher, {initialData: initialSwissData});
-	const {data: countriesData} = useSWR('timeline-countries', fetcher, {initialData: initialCountriesData});
-	const [country, setCountry] = useState<string>('');
+	const {data: countriesData} = useSWR(country ? 'timeline-countries' : null, fetcher);
 
 	return (
 		<Container>
@@ -171,7 +169,7 @@ const Graphs: NextPage<Props> = (props: Readonly<Props>) => {
 							<FormControl>
 								<FormLabel>Select a country</FormLabel>
 								<Select styles={customStyles} options={options} onChange={(data: any) => setCountry(data.value)}/>
-								{country ?
+								{countriesData && country ?
 									<Line
 										height={250}
 										data={{

@@ -21,6 +21,11 @@ const Navbar = () => (
 			padding={0}
 		>
 			<ListItem paddingRight={5}>
+				<Link href="/">
+					<ExternalLink fontSize="lg">Home</ExternalLink>
+				</Link>
+			</ListItem>
+			<ListItem paddingRight={5}>
 				<Link href="/about">
 					<ExternalLink fontSize="lg">About</ExternalLink>
 				</Link>
