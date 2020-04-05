@@ -18,7 +18,7 @@ const Index: NextPage<unknown> = () => {
 	return (
 		<Container>
 			<Stack paddingTop={8} spacing={5}>
-				<Heading fontSize="xl" textAlign="center" p="5px">Explore stats & compare coronavirus treatment methods easily!</Heading>
+				<Heading fontSize="xl" textAlign="center" p="5px">Explore stats & compare coronavirus treatment easily!</Heading>
 				<Flex
 					direction="row"
 					wrap="wrap"
