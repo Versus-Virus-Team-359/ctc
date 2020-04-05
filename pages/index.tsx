@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/core';
 
 import Container from '../components/container';
+import Footer from '../components/footer';
 
 const Index: NextPage<unknown> = () => {
 	return (
@@ -53,6 +54,9 @@ const Index: NextPage<unknown> = () => {
 					</Box>
 				</Flex>
 			</Stack>
+			<Footer>
+				<Text>Made with ❤️ at #VersusVirus 2020</Text>
+			</Footer>
 		</Container>
 	);
 };

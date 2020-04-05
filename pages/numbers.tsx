@@ -8,7 +8,11 @@ import {
 	Stack,
 	FormControl,
 	FormLabel,
-	Text
+	List,
+	ListItem,
+	Text,
+	Link,
+	Icon
 } from '@chakra-ui/core';
 import useSWR from 'swr';
 
@@ -78,8 +82,75 @@ const Numbers: NextPage<Props> = (props: Readonly<Props>) => {
 										confirmed={data?.locations.filter((element: any) => element.country === country)[0].latest.confirmed}
 										deaths={data?.locations.filter((element: any) => element.country === country)[0].latest.deaths}
 									/> :
-									''}
+									<Text as="i">Note: Number of countries is limited for performance reasons.</Text>}
 							</FormControl>
+						</Stack>
+					</Box>
+				</Flex>
+				<Heading fontSize="xl" textAlign="center" p="5px">Pre-existing medical conditions stats:</Heading>
+				<Flex
+					direction="row"
+					wrap="wrap"
+					alignItems="center"
+					justifyContent="center"
+				>
+					<Box width="24em" height="12em" p={4} m={3} borderWidth="1px" rounded="lg">
+						<Stack spacing={3}>
+							<Text fontSize="xl">Cardiovascular disease:</Text>
+							<List styleType="disc">
+								<ListItem>Death rate (confirmed cases): 13,2%</ListItem>
+								<ListItem>Death rate (all cases): 10,5%</ListItem>
+							</List>
+							<Link isExternal href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/">Source <Icon name="external-link" mx="2px"/></Link>
+						</Stack>
+					</Box>
+					<Box width="24em" height="12em" p={4} m={3} borderWidth="1px" rounded="lg">
+						<Stack spacing={3}>
+							<Text fontSize="xl">Diabetes:</Text>
+							<List styleType="disc">
+								<ListItem>Death rate (confirmed cases): 9,2%</ListItem>
+								<ListItem>Death rate (all cases): 7,3%</ListItem>
+							</List>
+							<Link isExternal href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/">Source <Icon name="external-link" mx="2px"/></Link>
+						</Stack>
+					</Box>
+					<Box width="24em" height="12em" p={4} m={3} borderWidth="1px" rounded="lg">
+						<Stack spacing={3}>
+							<Text fontSize="xl">Chronic respiratory disease:</Text>
+							<List styleType="disc">
+								<ListItem>Death rate (confirmed cases): 8%</ListItem>
+								<ListItem>Death rate (all cases): 6,3%</ListItem>
+							</List>
+							<Link isExternal href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/">Source <Icon name="external-link" mx="2px"/></Link>
+						</Stack>
+					</Box>
+					<Box width="24em" height="12em" p={4} m={3} borderWidth="1px" rounded="lg">
+						<Stack spacing={3}>
+							<Text fontSize="xl">Hypertension</Text>
+							<List styleType="disc">
+								<ListItem>Death rate (confirmed cases): 8,4%</ListItem>
+								<ListItem>Death rate (all cases): 6%</ListItem>
+							</List>
+							<Link isExternal href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/">Source <Icon name="external-link" mx="2px"/></Link>
+						</Stack>
+					</Box>
+					<Box width="24em" height="12em" p={4} m={3} borderWidth="1px" rounded="lg">
+						<Stack spacing={3}>
+							<Text fontSize="xl">Cancer:</Text>
+							<List styleType="disc">
+								<ListItem>Death rate (confirmed cases): 7,6%</ListItem>
+								<ListItem>Death rate (all cases): 5,6%</ListItem>
+							</List>
+							<Link isExternal href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/">Source <Icon name="external-link" mx="2px"/></Link>
+						</Stack>
+					</Box>
+					<Box width="24em" height="12em" p={4} m={3} borderWidth="1px" rounded="lg">
+						<Stack spacing={3}>
+							<Text fontSize="xl">No pre-existing conditions:</Text>
+							<List styleType="disc">
+								<ListItem>Death rate (all cases): 0,9%</ListItem>
+							</List>
+							<Link isExternal href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/">Source <Icon name="external-link" mx="2px"/></Link>
 						</Stack>
 					</Box>
 				</Flex>
