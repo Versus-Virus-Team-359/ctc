@@ -66,7 +66,8 @@ const Images: NextPage<unknown> = () => {
 
 	useEffect(() => () => {
 		// Make sure to revoke the data uris to avoid memory leaks
-		URL.revokeObjectURL(image ?? '');
+		// @ts-ignore
+		URL.revokeObjectURL(image);
 	}, [image]);
 
 	return (
@@ -78,8 +79,8 @@ const Images: NextPage<unknown> = () => {
 				</Text>
 				<Text as="b">Sample images (click to download):</Text>
 				<Flex>
-					<Link download href="/images/covid.jpg" paddingRight={5}>COVID-19</Link>
-					<Link download href="/images/notcovid.png">not COVID-19</Link>
+					<Link download href="/images/covid.png" paddingRight={5}>COVID-19</Link>
+					<Link download href="/images/notcovid.jpeg">not COVID-19</Link>
 				</Flex>
 				<DropZone {...getRootProps({isDragActive, isDragAccept, isDragReject})}>
 					<input {...getInputProps()}/>
