@@ -54,8 +54,6 @@ const Images: NextPage<unknown> = () => {
 		const classifier = await ml5.imageClassifier('/model/model.json', modelLoaded);
 		const results = await classifier.predict(document.querySelector('#image'));
 
-		console.log(results);
-
 		if (results[0].label === 'covid') {
 			setClassification(`COVID-19 detected, confidence: ${(results[0].confidence * 100).toFixed(2)}%`);
 		} else {
