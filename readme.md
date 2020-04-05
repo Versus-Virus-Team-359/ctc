@@ -1,6 +1,6 @@
 # Coronavirus Treatment Comparison (CTC)
 
-> Explore stats & compare coronavirus treatment methods easily! #VersusVirus 2020 hackaton project :rocket:
+> Explore stats & compare coronavirus treatment easily! #VersusVirus 2020 hackaton project :rocket:
 
 [![Build Status](https://travis-ci.org/Versus-Virus-Team-359/ctc.svg?branch=master)](https://travis-ci.org/Versus-Virus-Team-359/ctc)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
