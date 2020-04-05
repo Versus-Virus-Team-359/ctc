@@ -73,7 +73,7 @@ const Images: NextPage<unknown> = () => {
 		<Container>
 			<Stack paddingTop={8} spacing={5} alignItems="center" justifyContent="center">
 				<Heading fontSize="xl" textAlign="center" p="5px">Analyze X-Ray photos using Machine Learning:</Heading>
-				<Text maxWidth="50em">
+				<Text maxWidth="50em" p={3}>
 					This tool allow you to check x-ray lungs scan photos on whether the patient has COVID-19 or not.
 				</Text>
 				<Text as="b">Sample images (click to download):</Text>
