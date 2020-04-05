@@ -24,14 +24,18 @@ const Team: NextPage<unknown> = () => {
 				>
 					<Box width="20em" p={4} m={3} borderWidth="1px" rounded="lg">
 						<Stack spacing={3} textAlign="center" alignItems="center" justifyContent="center">
-							<Image width="10em" rounded="full" src={require('../public/images/antoni.png')} alt="Antoni Kepinski"/>
+							{/*
+  								// @ts-ignore */}
+							<Image width="10em" rounded="full" src={require('../public/images/antoni.png')} alt="Antoni Kepinski" draggable={false} loading="lazy" decoding="async"/>
 							<Text fontSize="xl">Antoni Kepinski 🇵🇱</Text>
 							<Text as="i">Front end development</Text>
 						</Stack>
 					</Box>
 					<Box width="20em" p={4} m={3} borderWidth="1px" rounded="lg">
 						<Stack spacing={3} textAlign="center" alignItems="center" justifyContent="center">
-							<Image width="10em" rounded="full" src={require('../public/images/bhargav.png')} alt="Bhargav Bhatt"/>
+							{/*
+  								// @ts-ignore */}
+							<Image width="10em" rounded="full" src={require('../public/images/bhargav.png')} alt="Bhargav Bhatt" draggable={false} loading="lazy" decoding="async"/>
 							<Text fontSize="xl">Bhargav Bhatt 🇱🇮</Text>
 							<Text as="i">Machine learning, image classification</Text>
 						</Stack>

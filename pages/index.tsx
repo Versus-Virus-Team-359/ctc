@@ -27,7 +27,9 @@ const Index: NextPage<unknown> = () => {
 				>
 					<Box p={4} m={3} borderWidth="1px" rounded="lg">
 						<Stack spacing={3}>
-							<Image width="20em" height="15em" src={require('../public/images/undraw_Calculator.svg')} alt="Numbers"/>
+							{/*
+  								// @ts-ignore */}
+							<Image width="20em" height="15em" src={require('../public/images/undraw_Calculator.svg')} alt="Numbers" draggable={false} loading="lazy" decoding="async"/>
 							<Text fontSize="xl">Numbers</Text>
 							<Link href="/numbers">
 								<Button variantColor="green">Learn more</Button>
@@ -36,7 +38,9 @@ const Index: NextPage<unknown> = () => {
 					</Box>
 					<Box p={4} m={3} borderWidth="1px" rounded="lg">
 						<Stack spacing={3}>
-							<Image width="20em" height="15em" src={require('../public/images/undraw_pie_graph.svg')} alt="Numbers"/>
+							{/*
+  								// @ts-ignore */}
+							<Image width="20em" height="15em" src={require('../public/images/undraw_pie_graph.svg')} alt="Numbers" draggable={false} loading="lazy" decoding="async"/>
 							<Text fontSize="xl">Graphs</Text>
 							<Link href="/graphs">
 								<Button variantColor="green">Learn more</Button>
@@ -45,7 +49,9 @@ const Index: NextPage<unknown> = () => {
 					</Box>
 					<Box p={4} m={3} borderWidth="1px" rounded="lg">
 						<Stack spacing={3}>
-							<Image width="20em" height="15em" src={require('../public/images/undraw_web_search.svg')} alt="Numbers"/>
+							{/*
+  								// @ts-ignore */}
+							<Image width="20em" height="15em" src={require('../public/images/undraw_web_search.svg')} alt="Numbers" draggable={false} loading="lazy" decoding="async"/>
 							<Text fontSize="xl">Images</Text>
 							<Link href="/images">
 								<Button variantColor="green">Learn more</Button>
