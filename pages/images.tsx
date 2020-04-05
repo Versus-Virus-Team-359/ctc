@@ -56,7 +56,7 @@ const Images: NextPage<unknown> = () => {
 
 		console.log(results);
 
-		if (results[0].label === 'Covid19') {
+		if (results[0].label === 'covid') {
 			setClassification(`COVID-19 detected, confidence: ${(results[0].confidence * 100).toFixed(2)}%`);
 		} else {
 			setClassification(`COVID-19 not detected, confidence: ${(results[0].confidence * 100).toFixed(2)}%`);
